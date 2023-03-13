@@ -1,9 +1,38 @@
 ## Concept
-Create Menu Drawer(s). 
+Create Menu. 
 
 TODO
 - [x] Find bud image
 - [x] Upload image to `./public` folder
 
 Critical components:
-- MenuItem (parent): has image, item name, On drawer (add and subtract button items)
+- MenuItem (parent): has image, item name, item price, order button
+
+```
+State 0: default
+__________________________________________ 
+| ___________                             |
+| |         |   item name                 |
+| |   img   |   ---------                 |
+| |_________|   | order |           price |
+|               ---------                 |
+|_________________________________________|
+
+State 1: order button pressed
+__________________________________________ 
+| ___________                             |
+| |         |   item name                 |
+| |   img   |   ---------                 |
+| |_________|   -   1   +           price |
+|               ---------                 |
+|_________________________________________|
+
+With dummy values
+__________________________________________ 
+| ___________                             |
+| |         |   gorilla glue OG           |
+| |   img   |   ---------                 |
+| |_________|   -   1   +          $69.99 |
+|               ---------                 |
+|_________________________________________|
+```
