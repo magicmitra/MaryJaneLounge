@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+
 type MenuItemProps = {
     id: string,
     name: string,
@@ -6,12 +8,14 @@ type MenuItemProps = {
 }
 
 const MenuItem = (props: MenuItemProps) => {
+    const [getAmount, setAmount] = useState(0)
     return (
         <div> 
-            {props.id}
-            {props.name}
-            {props.price}
-            {props.img}
+            <img src={props.img}
+                 height={350}
+                 width={700}
+                 style={{ alignSelf: 'left' }}
+            />
         </div>
     )
 }

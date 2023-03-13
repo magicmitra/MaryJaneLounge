@@ -5,7 +5,7 @@ import MenuItem from './MenuItem';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MenuItem id="1" name="Gorilla Glue OG" price="$69.99" img="xxx" />
+    <MenuItem id="1" name="Gorilla Glue OG" price="$69.99" img="/images/budz.PNG" />
   </React.StrictMode>
 );
 
