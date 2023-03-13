@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './MenuItem';
+import MenuItem from './MenuItem';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <MenuItem id="1" name="Gorilla Glue OG" price="$69.99" img="xxx" />
   </React.StrictMode>
 );
 
