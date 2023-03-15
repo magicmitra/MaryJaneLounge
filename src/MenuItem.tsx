@@ -16,7 +16,7 @@ const MenuItem = (props: MenuItemProps) => {
             <img src={props.img}
                  style={imageStyle}
             />
-            
+            {props.name}
             <Button style={buttonStyle}>
                 ORDER
             </Button>
@@ -29,7 +29,8 @@ const buttonStyle = {
     backgroundColor: "#683973",
     color: "#B899BF",
     textFont: 'IBM Plex Mono',
-    marginRight: '30px'
+    marginRight: '30px',
+    marginLeft: '50px'
 }
 
 

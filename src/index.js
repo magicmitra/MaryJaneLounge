@@ -1,11 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MenuItem from './MenuItem';
+import weeds from './data/weed'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MenuItem id="1" name="Gorilla Glue OG" price="$69.99" img="/images/budz.PNG" />
+    {
+      weeds.map(weed => {
+        return (
+          <MenuItem 
+          id={weed.id}
+          name={weed.name}
+          price={weed.price}
+          img={weed.img}
+          >
+        </MenuItem>
+        )
+      })
+    }
   </React.StrictMode>
 );
 

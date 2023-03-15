@@ -4,9 +4,10 @@ Create Menu.
 TODO
 - [x] Find bud image
 - [x] Upload image to `./public` folder
-- [ ] Pull data from JSON
+- [x] Pull data from JSON
 - [ ] Uniform fonts 
 - [ ] Implement pseudo-cart
+- [ ] setState on button clicks
 
 Critical components:
 - MenuItem (parent): has image, item name, item price, order button
