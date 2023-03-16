@@ -10,7 +10,16 @@ type MenuItemProps = {
 }
 
 const MenuItem = (props: MenuItemProps) => {
-    const [getAmount, setAmount] = useState(0)
+    const [amount, setAmount] = useState(0)
+
+    // one click from the ORDER button and auto set state to 1
+    // same with the plus button. Call it 'add'
+    const handleAddClick = () => setAmount(amount + 1)
+    const handleSubtractClick = () => setAmount(amount - 1)
+
+    // conditional render based of state
+    // if amount is 0, then show order button
+    // if amount > 0, show - and + buttons along with amount
     return (
         <div> 
             <img src={props.img}
