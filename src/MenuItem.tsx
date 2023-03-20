@@ -26,9 +26,28 @@ const MenuItem = (props: MenuItemProps) => {
                  style={imageStyle}
             />
             {props.name}
-            <Button style={buttonStyle}>
-                ORDER
-            </Button>
+            {
+                amount < 1 ? (
+                    <Button style={buttonStyle}
+                            onClick={handleAddClick}>
+                        ORDER
+                    </Button>
+                ) : (
+                    <div>
+                        <Button style={buttonPlusMinusStyle}
+                                onClick={handleSubtractClick}>
+                        -
+                        </Button>
+                        {amount}
+                        <Button style={buttonPlusMinusStyle}
+                                onClick={handleAddClick}>
+                        +
+                        </Button>
+                    </div>
+                    
+            )}
+                
+                
             {props.price}
         </div>
     )
@@ -40,6 +59,15 @@ const buttonStyle = {
     textFont: 'IBM Plex Mono',
     marginRight: '30px',
     marginLeft: '50px'
+}
+
+const buttonPlusMinusStyle = {
+    backgroundColor: "#683973",
+    color: "#B899BF",
+    textFont: 'IBM Plex Mono',
+    borderRadius: 100,
+    height: '30px',
+    width: '30px'
 }
 
 
