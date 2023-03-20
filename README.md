@@ -8,7 +8,7 @@ TODO
 - [ ] Uniform fonts 
 - [ ] Implement pseudo-cart
 - [ ] setState on button clicks
-- [ ] change price type string -> float
+- [x] change price type string -> number
 
 Critical components:
 - MenuItem (parent): has image, item name, item price, order button

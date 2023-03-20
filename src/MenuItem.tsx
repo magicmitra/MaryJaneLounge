@@ -48,7 +48,7 @@ const MenuItem = (props: MenuItemProps) => {
             )}
                 
                 
-            {props.price}
+            {`$${props.price}`}
         </div>
     )
 }
