@@ -5,7 +5,7 @@ import React, { useState, Fragment } from 'react'
 type MenuItemProps = {
     id: string,
     name: string,
-    price: string,
+    price: number,
     img: string
 }
 
@@ -46,8 +46,6 @@ const MenuItem = (props: MenuItemProps) => {
                     </div>
                     
             )}
-                
-                
             {`$${props.price}`}
         </div>
     )
@@ -65,9 +63,9 @@ const buttonPlusMinusStyle = {
     backgroundColor: "#683973",
     color: "#B899BF",
     textFont: 'IBM Plex Mono',
-    borderRadius: 100,
-    height: '30px',
-    width: '30px'
+    borderRadius: 50,
+    height: '20px',
+    width: '10px'
 }
 
 

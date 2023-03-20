@@ -7,7 +7,7 @@ TODO
 - [x] Pull data from JSON
 - [ ] Uniform fonts 
 - [ ] Implement pseudo-cart
-- [ ] setState on button clicks
+- [x] setState on button clicks
 - [x] change price type string -> number
 
 Critical components:
