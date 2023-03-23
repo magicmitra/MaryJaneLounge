@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MenuItem from './MenuItem';
+import Product from './Product';
 import weeds from './data/weed'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -9,13 +9,13 @@ root.render(
     {
       weeds.map(weed => {
         return (
-          <MenuItem 
-          id={weed.id}
-          name={weed.name}
-          price={weed.price}
-          img={weed.img}
+          <Product 
+            id={weed.id}
+            name={weed.name}
+            price={weed.price}
+            img={weed.img}
           >
-        </MenuItem>
+        </Product>
         )
       })
     }

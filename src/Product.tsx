@@ -2,14 +2,14 @@ import { Button } from '@mui/material'
 import React, { useState, Fragment } from 'react'
 
 
-type MenuItemProps = {
+type ProductProps = {
     id: string,
     name: string,
     price: number,
     img: string
 }
 
-const MenuItem = (props: MenuItemProps) => {
+const Product = (props: ProductProps) => {
     const [amount, setAmount] = useState(0)
 
     // one click from the ORDER button and auto set state to 1
@@ -79,7 +79,7 @@ const imageStyle = {
     marginRight: '30px'
 }
 
-export default MenuItem
+export default Product
 
 // Color Scheme (monochromatic)
 // #6F5C73 - greyish
