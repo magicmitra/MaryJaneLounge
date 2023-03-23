@@ -1,7 +1,6 @@
 import { Button } from '@mui/material'
 import React, { useState, Fragment } from 'react'
 
-
 type ProductProps = {
     id: string,
     name: string,
@@ -81,9 +80,3 @@ const imageStyle = {
 
 export default Product
 
-// Color Scheme (monochromatic)
-// #6F5C73 - greyish
-// #DE7AF4 - pink light
-// #E9C2F2 - browninsh pink
-// #683973 - maroon
-// #B899BF - light grey 

@@ -8,7 +8,7 @@ TODO POC
 - [ ] Uniform fonts 
 - [ ] Implement cart component
 - [ ] Implement check component
-- [ ] Implement footer navigation with buttons for cart and check
+- [x] Implement footer navigation with buttons for cart and check
 - [x] setState on button clicks
 - [x] change price type string -> number
 - [x] Change MenuItem to Product
