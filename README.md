@@ -6,8 +6,9 @@ TODO POC
 - [x] Upload image to `./public` folder
 - [x] Pull data from JSON
 - [ ] Uniform fonts 
-- [ ] Implement cart
-- [ ] Implement check
+- [ ] Implement cart component
+- [ ] Implement check component
+- [ ] Implement footer navigation with buttons for cart and check
 - [x] setState on button clicks
 - [x] change price type string -> number
 - [x] Change MenuItem to Product
@@ -17,12 +18,18 @@ TODO down the line
 - [ ] Separate products by strains
 - [ ] Figure out product hierarchy/categories
 - [ ] Figure out product types
+- [ ] Implement menu component
+- [ ] Implement profile component
+- [ ] Extend footer navigation to include buttons for profile and menu
 
 Components:
 - Product: has image, item name, item price, order button. Must have the ability to add and delete items to the cart. 
-- Global Cart: (Array vs Set) vs Redux: holds all the Products added on to it
 - Cart (rendered on button click): Renders the contents inside the Global Cart. Cart Items can be deleted with the press of a button. 
 - Check 
+
+Auxilliary Objects:
+- Global Cart: (Array vs Set) vs Redux: holds all the Products added on to it
+- Accumulated Total: so user can keep ordering. 
 
 ```
 Product Render
