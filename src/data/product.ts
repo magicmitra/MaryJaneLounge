@@ -1,6 +1,6 @@
-import Product from '../models/product'
+import ProductModel from '../models/product'
 
-const weeds: Product[] = [
+const products: ProductModel[] = [
     {
         "id": "0",
         "name": "Gorilla Glue OG",
@@ -24,4 +24,4 @@ const weeds: Product[] = [
     }
 ]
 
-export default weeds
+export default products

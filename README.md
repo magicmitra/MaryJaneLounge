@@ -27,9 +27,9 @@ Components:
 - Cart (rendered on button click): Renders the contents inside the Global Cart. Cart Items can be deleted with the press of a button. 
 - Check 
 
-Auxilliary Objects:
-- Global Cart: (Array vs Set) vs Redux: holds all the Products added on to it
-- Accumulated Total: so user can keep ordering. 
+## Carts
+- Cart: represents the current cart 
+- Already Ordered Cart: represents the items the user has already ordered. Cart gets added to Already Ordered Cart as soon as the user orders the current cart. Total amount to be paid is determined by items present in this cart. 
 
 ```
 Product Render
@@ -83,5 +83,13 @@ ___________________________________________
 |                           -------- 
 _________________________________________
 ```
-## (Array vs Set) vs Redux
-- Kinda depends on the component architecture which you have yet to draw bro. LOL
+## Redux
+- Redux. Adding to the cart is handled by the Product + and - buttons. Add products to this store, and when the cart is ready to render, retrieve the products in this store. 
+- Actions - add to cart, remove from cart, add to already ordered cart. `ADDTOCART`, `REMOVEFROMCART`, `ADDTOALREADYORDEREDCART`
+- States: `cart:[]`, `alreadyOrderedCart:[]`
+```
+state: {
+    cart:[],
+    alreadyOrderedCart:[],
+}
+```

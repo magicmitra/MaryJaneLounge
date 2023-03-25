@@ -1,48 +1,48 @@
 import { Button } from '@mui/material'
 import Product from './Product';
-import weeds from './data/product'
+import products from './data/product'
 
-function App() {
+function App() {    
 
-  return (
-    <div className="App">
-        <header className="App-header">
-        </header>
+    return (
+        <div className="App">
+            <header className="App-header">
+            </header>
         <div className="Prducts">
             {
-                weeds.map(weed => {
+                products.map(product => {
                     return (
                         <Product 
-                            id={weed.id}
-                            name={weed.name}
-                            price={weed.price}
-                            img={weed.img}
+                            id={product.id}
+                            name={product.name}
+                            price={product.price}
+                            img={product.img}
                         />
                     )   
                 })
             }      
         </div>
 
-        <footer className="App-footer"
+            <footer className="App-footer"
                 style={footerStyle}>
-            <Button style={buttonFooterNavStyle}
-                    onClick={() => alert('PROFILE COMING SOON')}>
-                PROFILE
-            </Button>
-            <Button style={buttonFooterNavStyle}
-                    onClick={() => alert('MENU COMING SOON')}>
-                MENU
-            </Button>
-            <Button style={buttonFooterNavStyle}
-                    onClick={() => alert('CART COMING SOON')}>
-                CART
-            </Button>
-            <Button style={buttonFooterNavStyle}
-                    onClick={() => alert('CHECK COMING SOON')}>
-                CHECK
-            </Button>
-        </footer>
-    </div>
+                <Button style={buttonFooterNavStyle}
+                        onClick={() => alert('PROFILE COMING SOON')}>
+                        PROFILE
+                </Button>
+                <Button style={buttonFooterNavStyle}
+                        onClick={() => alert('MENU COMING SOON')}>
+                        MENU
+                </Button>
+                <Button style={buttonFooterNavStyle}
+                        onClick={() => alert('CART COMING SOON')}>
+                        CART
+                </Button>
+                <Button style={buttonFooterNavStyle}
+                        onClick={() => alert('CHECK COMING SOON')}>
+                        CHECK
+                </Button>
+            </footer>
+        </div>
   );
 }
 
