@@ -12,6 +12,9 @@ TODO POC
 - [x] setState on button clicks
 - [x] change price type string -> number
 - [x] Change MenuItem to Product
+- [x] Redux actions add and remove to cart
+- [ ] Redux slice already ordered cart
+- [ ] Redux actions add to already ordered cart and clear cart
 
 TODO down the line
 - [ ] Figure out how user session works in QR code ordering. 
@@ -85,7 +88,7 @@ _________________________________________
 ```
 ## Redux
 - Redux. Adding to the cart is handled by the Product + and - buttons. Add products to this store, and when the cart is ready to render, retrieve the products in this store. 
-- Actions - add to cart, remove from cart, add to already ordered cart. `ADDTOCART`, `REMOVEFROMCART`, `ADDTOALREADYORDEREDCART`
+- Actions - add to cart, remove from cart, clear cart, add to already ordered cart. `ADDTOCART`, `REMOVEFROMCART`, `CLEARCART` `ADDTOALREADYORDEREDCART`
 - States: `cart:[]`, `alreadyOrderedCart:[]`
 ```
 state: {

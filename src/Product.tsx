@@ -1,5 +1,7 @@
 import { Button } from '@mui/material'
 import React, { useState, Fragment } from 'react'
+import { useDispatch } from 'react-redux'
+import { add, remove } from './store/cartSlice'
 
 type ProductProps = {
     id: string,
@@ -10,11 +12,28 @@ type ProductProps = {
 
 const Product = (props: ProductProps) => {
     const [amount, setAmount] = useState(0)
+    const dispatch = useDispatch()
 
     // one click from the ORDER button and auto set state to 1
     // same with the plus button. Call it 'add'
-    const handleAddClick = () => setAmount(amount + 1)
-    const handleSubtractClick = () => setAmount(amount - 1)
+    const handleAddClick = () => {
+        setAmount(amount + 1)
+        dispatch(add({
+           id: props.id,
+           name: props.name,
+           price: props.price,
+           img: props.img 
+        }))
+    }
+    const handleSubtractClick = () => {
+        setAmount(amount - 1)
+        dispatch(remove({
+            id: props.id,
+            name: props.name,
+            price: props.price,
+            img: props.img 
+        }))
+    }
 
     // conditional render based of state
     // if amount is 0, then show order button
