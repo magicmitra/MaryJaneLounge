@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
-import React, { useState, Fragment } from 'react'
-import { useDispatch } from 'react-redux'
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { add, remove } from './store/cartSlice'
 
 type ProductProps = {
@@ -13,7 +13,7 @@ type ProductProps = {
 const Product = (props: ProductProps) => {
     const [amount, setAmount] = useState(0)
     const dispatch = useDispatch()
-
+    
     // one click from the ORDER button and auto set state to 1
     // same with the plus button. Call it 'add'
     const handleAddClick = () => {

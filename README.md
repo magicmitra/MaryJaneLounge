@@ -13,8 +13,9 @@ TODO POC
 - [x] change price type string -> number
 - [x] Change MenuItem to Product
 - [x] Redux actions add and remove to cart
-- [ ] Redux slice already ordered cart
-- [ ] Redux actions add to already ordered cart and clear cart
+- [ ] Modal vs Page for cart render
+- [ ] Redux slice check
+- [ ] Redux actions add to check and clear cart
 
 TODO down the line
 - [ ] Figure out how user session works in QR code ordering. 
@@ -27,12 +28,12 @@ TODO down the line
 
 Components:
 - Product: has image, item name, item price, order button. Must have the ability to add and delete items to the cart. 
-- Cart (rendered on button click): Renders the contents inside the Global Cart. Cart Items can be deleted with the press of a button. 
-- Check 
+- Cart (rendered on button click): Renders the contents inside the Redux store cart. Cart Items can be deleted with the press of a button. 
+- Check: ordered from cart moves to the check. 
 
 ## Carts
 - Cart: represents the current cart 
-- Already Ordered Cart: represents the items the user has already ordered. Cart gets added to Already Ordered Cart as soon as the user orders the current cart. Total amount to be paid is determined by items present in this cart. 
+- Check: represents the items the user has already ordered. Cart gets added to Check as soon as the user orders the current cart. Total amount to be paid is determined by items present in this Check. 
 
 ```
 Product Render
@@ -88,11 +89,11 @@ _________________________________________
 ```
 ## Redux
 - Redux. Adding to the cart is handled by the Product + and - buttons. Add products to this store, and when the cart is ready to render, retrieve the products in this store. 
-- Actions - add to cart, remove from cart, clear cart, add to already ordered cart. `ADDTOCART`, `REMOVEFROMCART`, `CLEARCART` `ADDTOALREADYORDEREDCART`
-- States: `cart:[]`, `alreadyOrderedCart:[]`
+- Actions - add to cart, remove from cart, clear cart, add to check. `ADDTOCART`, `REMOVEFROMCART`, `CLEARCART`, `ADDTOCHECK`
+- States: `cart:[]`, `check:[]`
 ```
 state: {
     cart:[],
-    alreadyOrderedCart:[],
+    check:[],
 }
 ```
