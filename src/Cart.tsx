@@ -12,9 +12,23 @@ const Cart = () => {
      * the first time a user has ordered on a session so that the app can ask for 
      * payment details to guarantee them mothafuckas dont dine and dash. This will 
      * be used on the ORDER button.  
+     * State changes:
+     * -> removing an item from cart
+     * -> calculating total
      */
-    const [firstOrder, setFirstOrder] = useState(true)
+    const dispatch = useDispatch()
     const items = useSelector((state: RootState) => state.cart.items)
+    const [firstOrder, setFirstOrder] = useState(true)
+
+    const handleXClick = (id: string) => {
+        dispatch(remove({
+            id,
+            name: '',
+            price: null,
+            img: ''
+        }))
+    }
+    
 
     // x button <img> <name> <price>
     return (
@@ -23,33 +37,45 @@ const Cart = () => {
                 items.map(item => {
                     return (
                         <div>
-                            <Button>
+                            <Button onClick={() => handleXClick(item.id)}>
                                 x
                             </Button>
                             <img src={item.img}   
-                                 onClick={() => {}} 
+                                 style={imageStyle} 
                             />
-                            {item.name}
-                            {`$${item.price}`}
+                            {item.name }
+                            {` $${item.price}`}
                         </div>
                     )
                 })
             }
-            <div className="Subtotal">
-                {/** */}
-            </div>  
-            <div className="Taxes">
-                {/** */}
-            </div>
             <div className="Total">
-                {/** */}
+                { `Total $${items.reduce((acc, curr) => acc + curr.price, 0)}` }
             </div>
-            <Button>
+            <Button style={buttonStyle}
+                    onClick={() => {
+                        items.length > 0 ?
+                            alert('Your order is in the works. Thank you')
+                            : alert('Select Items to Order')
+                    }}>
                 ORDER
             </Button>
         </div>
     )
 }
 
+const imageStyle = {
+    height: 40,
+    width: 80,
+    marginRight: '5px'
+}
+
+const buttonStyle = {
+    backgroundColor: "#E9C2F2",
+    color: "#B899BF",
+    textFont: 'IBM Plex Mono',
+    marginRight: '30px',
+    marginLeft: '50px'
+}
 
 export default Cart

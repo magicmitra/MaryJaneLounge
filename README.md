@@ -6,14 +6,15 @@ TODO POC
 - [x] Upload image to `./public` folder
 - [x] Pull data from JSON
 - [ ] Uniform fonts 
-- [ ] Implement cart component
+- [x] Implement cart component
 - [ ] Implement check component
 - [x] Implement footer navigation with buttons for cart and check
 - [x] setState on button clicks
 - [x] change price type string -> number
-- [x] Change MenuItem to Product
+- [x] Change Product to MenuItem
 - [x] Redux actions add and remove to cart
-- [ ] Modal vs Page for cart render
+- [x] Modal for cart render, called by root `<App>`
+- [ ] Consolidate quantity between `<MenuItem>` and `<Cart>`
 - [ ] Redux slice check
 - [ ] Redux actions add to check and clear cart
 
@@ -27,7 +28,7 @@ TODO down the line
 - [ ] Extend footer navigation to include buttons for profile and menu
 
 Components:
-- Product: has image, item name, item price, order button. Must have the ability to add and delete items to the cart. 
+- MenuItem: has image, item name, item price, order button. Must have the ability to add and delete items to the cart. 
 - Cart (rendered on button click): Renders the contents inside the Redux store cart. Cart Items can be deleted with the press of a button. 
 - Check: ordered from cart moves to the check. 
 
@@ -36,7 +37,7 @@ Components:
 - Check: represents the items the user has already ordered. Cart gets added to Check as soon as the user orders the current cart. Total amount to be paid is determined by items present in this Check. 
 
 ```
-Product Render
+MenuItem Render
 State 0: default
 __________________________________________ 
 | ___________                             |

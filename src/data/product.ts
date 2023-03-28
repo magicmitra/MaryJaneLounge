@@ -1,6 +1,6 @@
 import ProductModel from '../models/product'
 
-const products: ProductModel[] = [
+const products: Array<ProductModel> = [
     {
         "id": "0",
         "name": "Gorilla Glue OG",

@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import ProductModel from '../models/product'
 
-const items: ProductModel[] = new Array()
+const items: Array<ProductModel> = new Array()
 export const cartSlice = createSlice({
     name: 'cart',
     initialState: {

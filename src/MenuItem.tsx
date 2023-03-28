@@ -2,16 +2,18 @@ import { Button } from '@mui/material'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { add, remove } from './store/cartSlice'
+import { RootState } from './store/store'
 
-type ProductProps = {
+type MenuItemProps = {
     id: string,
     name: string,
     price: number,
     img: string
 }
 
-const Product = (props: ProductProps) => {
+const MenuItem = (props: MenuItemProps) => {
     const [amount, setAmount] = useState(0)
+    const items = useSelector((state: RootState) => state.cart.items)
     const dispatch = useDispatch()
     
     // one click from the ORDER button and auto set state to 1
@@ -97,5 +99,5 @@ const imageStyle = {
     marginRight: '30px'
 }
 
-export default Product
+export default MenuItem
 
