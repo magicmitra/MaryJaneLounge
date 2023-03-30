@@ -9,7 +9,8 @@ export const checkSlice = createSlice({
     },
     reducers: {
         addToCheck: (state, action) => {
-            state.items = [...state.items, action.payload]
+            const { payload } = action
+            state.items = [...state.items, ...payload]
         },
         clearCheck: state => {
             state.items.slice(0)

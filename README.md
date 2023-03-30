@@ -16,8 +16,9 @@ TODO POC
 - [x] Redux actions add and remove to cart
 - [x] Modal for cart render, called by root `<App>`
 - [x] Consolidate quantity between `<MenuItem>` and `<Cart>`
-- [ ] Redux slice check
-- [ ] Redux actions add to check and clear cart
+- [x] Redux slice check
+- [x] Redux actions add to check and clear cart
+- [ ] Redux action clear check
 
 TODO down the line
 - [ ] Figure out how user session works in QR code ordering. 
