@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
-import { add, remove } from '../store/cartSlice'
+import { addToCart, removeFromCart } from '../store/cartSlice'
 import { RootState } from '../store/store'
 import ProductModel from '../models/product'
 
@@ -14,7 +14,7 @@ const Quantity = (props: ProductModel) => {
     const dispatch = useDispatch()
 
     const handleAddClick = () => {
-        dispatch(add({
+        dispatch(addToCart({
            id: props.id,
            name: props.name,
            price: props.price,
@@ -22,7 +22,7 @@ const Quantity = (props: ProductModel) => {
         }))
     }
     const handleSubtractClick = () => {
-        dispatch(remove({
+        dispatch(removeFromCart({
             id: props.id,
             name: props.name,
             price: props.price,

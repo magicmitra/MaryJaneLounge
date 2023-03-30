@@ -1,14 +1,18 @@
 import { Button, Modal, Box } from '@mui/material'
 import { useState } from 'react'
-import MenuItem from './components/MenuItem';
+import MenuItem from './components/MenuItem'
 import Cart from './components/Cart'
+import Check from './components/Check'
 import products from './data/product'
 
 function App() {    
 
     const [openCartModal, setOpenCartModal] = useState(false)
+    const [openCheckModal, setOpenCheckModal] = useState(false)
     const handleOpenCartModal = () => setOpenCartModal(true)
     const handleCloseCartModal = () => setOpenCartModal(false)
+    const handleOpenCheckModal = () => setOpenCheckModal(true)
+    const handleCloseCheckModal = () => setOpenCheckModal(false)
 
     return (
         <div className="App">
@@ -48,14 +52,22 @@ function App() {
                     open={openCartModal}
                     onClose={handleCloseCartModal}
                 >
-                    <Box sx={cartModalStyle}>
+                    <Box sx={modalStyle}>
                         <Cart/>
                     </Box>
                 </Modal>
                 <Button style={buttonFooterNavStyle}
-                        onClick={() => alert('CHECK COMING SOON')}>
+                        onClick={handleOpenCheckModal}>
                         CHECK
                 </Button>
+                <Modal
+                    open={openCheckModal}
+                    onClose={handleCloseCheckModal}
+                >
+                    <Box sx={modalStyle}>
+                        <Check />
+                    </Box>
+                </Modal>
             </footer>
         </div>
   );
@@ -72,7 +84,7 @@ const footerStyle = {
     marginTop: '20px'
 }
 
-const cartModalStyle = {
+const modalStyle = {
     position: 'absolute',
     top: '50%',
     left: '50%',

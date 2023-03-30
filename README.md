@@ -7,7 +7,7 @@ TODO POC
 - [x] Pull data from JSON
 - [ ] Uniform fonts 
 - [x] Implement cart component
-- [ ] Implement check component
+- [x] Implement check component
 - [x] Implement footer navigation with buttons for cart and check
 - [x] Dispatch actions on store for - and + button clicks
 - [x] Change price type string -> number
@@ -16,8 +16,9 @@ TODO POC
 - [x] Redux actions add and remove to cart
 - [x] Modal for cart render, called by root `<App>`
 - [x] Consolidate quantity between `<MenuItem>` and `<Cart>`
-- [ ] Redux slice check
-- [ ] Redux actions add to check and clear cart
+- [x] Redux slice check
+- [x] Redux actions add to check and clear cart
+- [x] Redux action clear check
 
 TODO down the line
 - [ ] Figure out how user session works in QR code ordering. 
