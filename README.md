@@ -30,6 +30,7 @@ TODO down the line
 Components:
 - MenuItem: has image, item name, item price, order button. Must have the ability to add and delete items to the cart. 
 - Cart (rendered on button click): Renders the contents inside the Redux store cart. Cart Items can be deleted with the press of a button. 
+- Quantity: child of any component who needs quantity displayed.
 - Check: ordered from cart moves to the check. 
 
 ## Carts

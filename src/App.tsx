@@ -1,7 +1,7 @@
 import { Button, Modal, Box } from '@mui/material'
 import { useState } from 'react'
-import MenuItem from './MenuItem';
-import Cart from './Cart'
+import MenuItem from './components/MenuItem';
+import Cart from './components/Cart'
 import products from './data/product'
 
 function App() {    
@@ -23,6 +23,7 @@ function App() {
                             name={product.name}
                             price={product.price}
                             img={product.img}
+                            type={product.type}
                         />
                     )   
                 })
@@ -76,7 +77,7 @@ const cartModalStyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 800,
     bgcolor: '#6F5C73',
     border: '2px solid #000',
     boxShadow: 24,
