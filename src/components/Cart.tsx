@@ -12,10 +12,6 @@ const Cart = () => {
      * the first time a user has ordered on a session so that the app can ask for 
      * payment details to guarantee them mothafuckas dont dine and dash. This will 
      * be used on the ORDER button.  
-     * State changes:
-     * -> removing an item from cart
-     * -> adding item to cart
-     * -> calculating total
      */ 
     
     const items = useSelector((state: RootState) => state.cart.items)
@@ -29,8 +25,10 @@ const Cart = () => {
         if(items.length > 0) {
             dispatch(addToCheck(items))
             dispatch(clearCart())
-            // TODO: pass this request to the server to be processed
+            // TODO: 
+            // 1. pass this request to the server to be processed
             // and passed into the kitchen app. 
+            // 2. Ask for payment details on first order to secure payment
             alert('Your order is in the works, Hang tight.')
         } else {
             alert('Select Items to Order')

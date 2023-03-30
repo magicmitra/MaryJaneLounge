@@ -13,6 +13,7 @@ export const checkSlice = createSlice({
             state.items = [...state.items, ...payload]
         },
         clearCheck: state => {
+            // call when payment has been recieved
             state.items.slice(0)
         }
     }
