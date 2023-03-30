@@ -1,6 +1,8 @@
 import { Button } from '@mui/material'
 import { RootState } from '../store/store'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { addToCheck } from '../store/checkSlice'
+import { clearCart } from '../store/cartSlice'
 import Quantity from './Quantity'
 
 const Cart = () => {
@@ -14,14 +16,27 @@ const Cart = () => {
      * -> removing an item from cart
      * -> adding item to cart
      * -> calculating total
-     * 
-     * Pressing the ORDER button
+     */ 
+    
+    const items = useSelector((state: RootState) => state.cart.items)
+    const dispatch = useDispatch()
+
+    /* Pressing the ORDER button
      * -> All items retrieved from cart are placed into the check
      * -> Call clear() on cart
      */
-    const items = useSelector((state: RootState) => state.cart.items)
+    const handleCartOrderClick = () => {
+        if(items.length > 0) {
+            dispatch(addToCheck(items))
+            dispatch(clearCart())
+            // TODO: pass this request to the server to be processed
+            // and passed into the kitchen app. 
+            alert('Your order is in the works, Hang tight.')
+        } else {
+            alert('Select Items to Order')
+        }
+    }
 
-    // x button <img> <name> <price>
     return (
         <div className="Cart">
             {
@@ -48,11 +63,7 @@ const Cart = () => {
                 { `Total $${(items.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0)).toFixed(2)}` }
             </div>
             <Button style={buttonStyle}
-                    onClick={() => {
-                        items.length > 0 ?
-                            alert('Your order is in the works. Thank you')
-                            : alert('Select Items to Order')
-                    }}>
+                    onClick={handleCartOrderClick}>
                 ORDER
             </Button>
         </div>
