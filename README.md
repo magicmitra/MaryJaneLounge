@@ -9,12 +9,13 @@ TODO POC
 - [x] Implement cart component
 - [ ] Implement check component
 - [x] Implement footer navigation with buttons for cart and check
-- [x] setState on button clicks
-- [x] change price type string -> number
+- [x] Dispatch actions on store for - and + button clicks
+- [x] Change price type string -> number
 - [x] Change Product to MenuItem
+- [x] Redux slice cart
 - [x] Redux actions add and remove to cart
 - [x] Modal for cart render, called by root `<App>`
-- [ ] Consolidate quantity between `<MenuItem>` and `<Cart>`
+- [x] Consolidate quantity between `<MenuItem>` and `<Cart>`
 - [ ] Redux slice check
 - [ ] Redux actions add to check and clear cart
 
@@ -26,6 +27,7 @@ TODO down the line
 - [ ] Implement menu component
 - [ ] Implement profile component
 - [ ] Extend footer navigation to include buttons for profile and menu
+- [ ] Shopping cart icon with number of items
 
 Components:
 - MenuItem: has image, item name, item price, order button. Must have the ability to add and delete items to the cart. 
@@ -44,11 +46,11 @@ __________________________________________
 | ___________                             |
 | |         |   item name                 |
 | |   img   |   ---------                 |
-| |_________|   | order |           price |
+| |_________|   -   0   +           price |
 |               ---------                 |
 |_________________________________________|
 
-State 1: order button pressed
+State 1: add button pressed
 __________________________________________ 
 | ___________                             |
 | |         |   item name                 |
@@ -68,20 +70,20 @@ __________________________________________
 
 Cart Render
 ___________________________________________
-|  x <img>  <name> <price>  
+|   <img> - 1 + <name> <price>  
 |
-|  x <img>  Gorilla Glue OG $77.99
+|   <img> - 1 + Gorilla Glue OG $77.99
 |
-|  x <img>  Gorilla Glue OG $77.99
+|   <img> - 1 + Gorilla Glue OG $77.99
 |
-|  x <img>  Wedding Cake    $69.99
+|   <img> - 1 + Wedding Cake    $69.99
 |
-|  x <img>  Wedding Cake    $69.99
+|   <img> - 1 + Wedding Cake    $69.99
 |
 |                           _______
 |   
 |   SubTotal                $295.96
-|   Taxes
+|   
 |                           _______
 |   Total                   $295.96
 |                           -------
@@ -90,7 +92,7 @@ ___________________________________________
 _________________________________________
 ```
 ## Redux
-- Redux. Adding to the cart is handled by the Product + and - buttons. Add products to this store, and when the cart is ready to render, retrieve the products in this store. 
+- Redux. Adding to the cart is handled by the Quantity + and - buttons. Add products to this store, and when the cart is ready to render, retrieve the products in this store. 
 - Actions - add to cart, remove from cart, clear cart, add to check. `ADDTOCART`, `REMOVEFROMCART`, `CLEARCART`, `ADDTOCHECK`
 - States: `cart:[]`, `check:[]`
 ```

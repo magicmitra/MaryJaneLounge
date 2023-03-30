@@ -39,3 +39,8 @@ export const cartSlice = createSlice({
 export const { add, remove, clear } = cartSlice.actions
 
 export default cartSlice.reducer
+
+/**
+ * Possible Reducers:
+ * -> A reducer to splice an entire item out regardless of quentity (x button on UI)
+ */

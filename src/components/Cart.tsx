@@ -12,7 +12,12 @@ const Cart = () => {
      * be used on the ORDER button.  
      * State changes:
      * -> removing an item from cart
+     * -> adding item to cart
      * -> calculating total
+     * 
+     * Pressing the ORDER button
+     * -> All items retrieved from cart are placed into the check
+     * -> Call clear() on cart
      */
     const items = useSelector((state: RootState) => state.cart.items)
 
