@@ -69,8 +69,8 @@ const Cart = () => {
 }
 
 const imageStyle = {
-    height: 40,
-    width: 80,
+    height: 35,
+    width: 70,
     marginRight: '5px'
 }
 

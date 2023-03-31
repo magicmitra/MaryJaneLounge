@@ -6,10 +6,11 @@ import MenuItem from './components/MenuItem'
 import Cart from './components/Cart'
 import Check from './components/Check'
 import products from './data/product'
+import flattenCheck from './utils/flattenCheck'
 
 function App() {    
-    const cartItems = useSelector((state: RootState) => state.cart.items)
-    // TODO flatten cartItems
+    const cartItems = flattenCheck(useSelector((state: RootState) => state.cart.items))
+    const checkItems = flattenCheck(useSelector((state: RootState) => state.check.items))
     const [openCartModal, setOpenCartModal] = useState(false)
     const [openCheckModal, setOpenCheckModal] = useState(false)
     const handleOpenCartModal = () => setOpenCartModal(true)
@@ -39,10 +40,10 @@ function App() {
 
             <footer className="App-footer"
                 style={footerStyle}>
-                <Button style={buttonFooterNavStyle}
+                {/* <Button style={buttonFooterNavStyle}
                         onClick={() => alert('PROFILE COMING SOON')}>
                         PROFILE
-                </Button>
+                </Button> */}
                 <Button style={buttonFooterNavStyle}
                         onClick={() => alert('MENU COMING SOON')}>
                         MENU
@@ -65,7 +66,11 @@ function App() {
                 </Modal>
                 <Button style={buttonFooterNavStyle}
                         onClick={handleOpenCheckModal}>
-                        CHECK
+                        {
+                            (checkItems.length > 0) ?
+                                `CHECK (${checkItems.length})`
+                                : `CHECK`
+                        }
                 </Button>
                 <Modal
                     open={openCheckModal}
@@ -84,7 +89,7 @@ const buttonFooterNavStyle = {
     backgroundColor: "#683973",
     color: "#B899BF",
     textFont: 'IBM Plex Mono',
-    marginRight: '175px'
+    marginRight: '3px'
 }
 
 const footerStyle = {
@@ -96,7 +101,7 @@ const modalStyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 800,
+    width: 170,
     bgcolor: '#6F5C73',
     border: '2px solid #000',
     boxShadow: 24,
