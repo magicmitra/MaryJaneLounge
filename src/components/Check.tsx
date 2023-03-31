@@ -10,6 +10,7 @@ const Check = () => {
 
     const handleCloseCheckAndPay = () => {
         // TODO
+        alert('GIMME YOUR MONEY!')
     }
 
     const flattenCheck = (cartItems: CartItemModel[]) => {
@@ -25,6 +26,9 @@ const Check = () => {
     }
 
     const checkItems = flattenCheck(items)
+    const subtotal: number = checkItems.reduce((acc, curr) => acc + curr.price, 0)
+    const tax = 0   // TODO
+    const tip = 0   // TODO
 
     // Tip is calculated BEFORE taxes
     return (
@@ -41,14 +45,21 @@ const Check = () => {
                 })
             }
             <div className='Subtotal'>
-                Subtotal
+                Subtotal $ {subtotal.toFixed(2)}
+            </div>
+            <div className="Tip">
+                Tip - COMING SOON
             </div>
             <div className='Tax'>
-                Tax
+                Tax - COMING SOON
             </div>
             <div className='Total'>
-                Total
+                Total $ {(subtotal + tax + tip).toFixed(2)}
             </div>
+            <Button style={buttonStyle}
+                    onClick={handleCloseCheckAndPay}>
+                PAY
+            </Button>
         </div>
     )
 }

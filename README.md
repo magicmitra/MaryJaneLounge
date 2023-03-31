@@ -1,5 +1,10 @@
 ## Concept
-Create Menu of Products 
+QR Ordering POC
+1. `git clone https://github.com/magicmitra/MaryJaneLounge.git`
+2. `cd` into the directory
+3. `npm i`
+4. `npm start`
+5. If the browser did not automatically redirect you, go to `localhost:3000`
 
 TODO POC
 - [x] Find bud image
@@ -19,6 +24,10 @@ TODO POC
 - [x] Redux slice check
 - [x] Redux actions add to check and clear cart
 - [x] Redux action clear check
+- [x] Place holder for tip 
+- [ ] Tip component: 18%, 20%, 22%
+- [x] Calculate total: sub + tip + taxes
+- [x] Place holder for tax
 
 TODO down the line
 - [ ] Figure out how user session works in QR code ordering. 
@@ -29,6 +38,8 @@ TODO down the line
 - [ ] Implement profile component
 - [ ] Extend footer navigation to include buttons for profile and menu
 - [ ] Shopping cart icon with number of items
+- [ ] Tip component: custom tip
+- [ ] JSON of sales taxes for each state
 
 Components:
 - MenuItem: has image, item name, item price, order button. Must have the ability to add and delete items to the cart. 
@@ -75,21 +86,36 @@ ___________________________________________
 |
 |   <img> - 1 + Gorilla Glue OG $77.99
 |
-|   <img> - 1 + Gorilla Glue OG $77.99
+|   <img> - 12 + Wedding Cake   $69.99
 |
-|   <img> - 1 + Wedding Cake    $69.99
+|   Total                       $WHATEVERTHATIS
+|                           -------
+|                           | ORDER|
+|                           -------- 
+_________________________________________
+
+Check Render
+___________________________________________
+|    <name> <price>  
 |
-|   <img> - 1 + Wedding Cake    $69.99
+|   Gorilla Glue OG $77.99
+|
+|   Gorilla Glue OG $77.99
+|
+|   Wedding Cake    $69.99
+|
+|   Wedding Cake    $69.99
 |
 |                           _______
 |   
 |   SubTotal                $295.96
-|   
+|   Tip: 
+|   Tax     
 |                           _______
 |   Total                   $295.96
-|                           -------
-|                           | ORDER|
-|                           -------- 
+|                           ---------
+|                           | PAY   |
+|                           --------- 
 _________________________________________
 ```
 ## Redux

@@ -16,17 +16,9 @@ const MenuItem = (props: ProductModel) => {
                 img={props.img}
                 type={props.type}
                 />
-            {`$${props.price}`}
+            {`$ ${props.price}`}
         </div>
     )
-}
-
-const buttonStyle = {
-    backgroundColor: "#683973",
-    color: "#B899BF",
-    textFont: 'IBM Plex Mono',
-    marginRight: '30px',
-    marginLeft: '50px'
 }
 
 const imageStyle = {

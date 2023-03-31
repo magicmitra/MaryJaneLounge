@@ -52,13 +52,13 @@ const Cart = () => {
                                 img={item.img}
                                 type={item.type}
                 />
-                            {` $${item.price}`}
+                            {` $ ${item.price}`}
                         </div>
                     )
                 })
             }
             <div className="Total">
-                { `Total $${(items.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0)).toFixed(2)}` }
+                { `Total $ ${(items.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0)).toFixed(2)}` }
             </div>
             <Button style={buttonStyle}
                     onClick={handleCartOrderClick}>
