@@ -22,8 +22,8 @@ const MenuItem = (props: ProductModel) => {
 }
 
 const imageStyle = {
-    height: 200,
-    width: 400,
+    height: 100,
+    width: 200,
     alignSelf: 'left',
     marginTop: '10px',
     marginBottom: '5px',

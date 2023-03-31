@@ -1,8 +1,7 @@
 import { Button } from '@mui/material'
 import { RootState } from '../store/store'
 import { useSelector } from 'react-redux'
-import CartItemModel from '../models/cartItem'
-import ProductModel from '../models/product'
+import flattenCheck from '../utils/flattenCheck'
 
 const Check = () => {
 
@@ -11,18 +10,6 @@ const Check = () => {
     const handleCloseCheckAndPay = () => {
         // TODO
         alert('GIMME YOUR MONEY!')
-    }
-
-    const flattenCheck = (cartItems: CartItemModel[]) => {
-        const checkItems: ProductModel[] = []
-        cartItems.map(item => {
-            let quantity = item.quantity
-            while(quantity > 0) {
-                checkItems.push(item)
-                quantity--
-            }
-        })
-        return checkItems
     }
 
     const checkItems = flattenCheck(items)

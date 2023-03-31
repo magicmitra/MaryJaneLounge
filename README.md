@@ -25,9 +25,11 @@ TODO POC
 - [x] Redux actions add to check and clear cart
 - [x] Redux action clear check
 - [x] Place holder for tip 
-- [ ] Tip component: 18%, 20%, 22%
 - [x] Calculate total: sub + tip + taxes
 - [x] Place holder for tax
+- [x] Isolate function that flattens Cart Items
+- [x] Hacktomize for mobile. 
+- [ ] Optimize footer to be visible at all times. 
 
 TODO down the line
 - [ ] Figure out how user session works in QR code ordering. 
@@ -38,8 +40,10 @@ TODO down the line
 - [ ] Implement profile component
 - [ ] Extend footer navigation to include buttons for profile and menu
 - [ ] Shopping cart icon with number of items
+- [ ] Tip component: 18%, 20%, 22%
 - [ ] Tip component: custom tip
 - [ ] JSON of sales taxes for each state
+- [ ] Replace those damn modals with actual pages (react routes)
 
 Components:
 - MenuItem: has image, item name, item price, order button. Must have the ability to add and delete items to the cart. 
