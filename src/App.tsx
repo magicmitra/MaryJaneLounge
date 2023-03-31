@@ -1,12 +1,15 @@
 import { Button, Modal, Box } from '@mui/material'
 import { useState } from 'react'
+import { RootState } from './store/store'
+import { useSelector } from 'react-redux'
 import MenuItem from './components/MenuItem'
 import Cart from './components/Cart'
 import Check from './components/Check'
 import products from './data/product'
 
 function App() {    
-
+    const cartItems = useSelector((state: RootState) => state.cart.items)
+    // TODO flatten cartItems
     const [openCartModal, setOpenCartModal] = useState(false)
     const [openCheckModal, setOpenCheckModal] = useState(false)
     const handleOpenCartModal = () => setOpenCartModal(true)
@@ -46,7 +49,11 @@ function App() {
                 </Button>
                 <Button style={buttonFooterNavStyle}
                         onClick={handleOpenCartModal}>
-                        CART
+                        {
+                            (cartItems.length > 0) ? 
+                                `CART (${cartItems.length})` 
+                                : `CART`
+                        }
                 </Button>
                 <Modal
                     open={openCartModal}

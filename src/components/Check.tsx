@@ -13,6 +13,7 @@ const Check = () => {
         alert('GIMME YOUR MONEY!')
     }
 
+    // TODO Isolate this bitch
     const flattenCheck = (cartItems: CartItemModel[]) => {
         const checkItems: ProductModel[] = []
         cartItems.map(item => {

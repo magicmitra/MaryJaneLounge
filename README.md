@@ -28,6 +28,8 @@ TODO POC
 - [ ] Tip component: 18%, 20%, 22%
 - [x] Calculate total: sub + tip + taxes
 - [x] Place holder for tax
+- [ ] Replace those damn modals with actual pages (react routes)
+- [ ] Isolate function that flattens Cart Items
 
 TODO down the line
 - [ ] Figure out how user session works in QR code ordering. 
