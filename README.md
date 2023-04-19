@@ -44,6 +44,7 @@ TODO down the line
 - [ ] Tip component: custom tip
 - [ ] JSON of sales taxes for each state
 - [ ] Replace those damn modals with actual pages (react routes)
+- [ ] Move check source of truth to a backend service. 
 
 Components:
 - MenuItem: has image, item name, item price, order button. Must have the ability to add and delete items to the cart. 
