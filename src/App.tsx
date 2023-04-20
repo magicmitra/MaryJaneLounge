@@ -41,7 +41,8 @@ function App() {
             <footer className="App-footer"
                 style={{
                     position: 'fixed',
-                    marginTop: '20px'
+                    marginTop: '20px',
+                    bottom: '0px'
                 }}
                 >
                 {/* <Button style={buttonFooterNavStyle}
@@ -94,10 +95,6 @@ const buttonFooterNavStyle = {
     color: "#B899BF",
     textFont: 'IBM Plex Mono',
     marginRight: '3px'
-}
-
-const footerStyle = {
-    marginTop: '20px',
 }
 
 const modalStyle = {
