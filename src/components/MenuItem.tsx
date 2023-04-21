@@ -20,7 +20,7 @@ const MenuItem = (props: ProductModel) => {
             />
             <div style={{
                 position: 'absolute',
-                right: '100px',
+                right: '50px',
                 top: '12px'
             }}>
                 {props.name}
