@@ -30,25 +30,25 @@ const products: Array<ProductModel> = [
         "type": "cocktail"
     },
     {
-        "id": "0",
-        "name": "Gorilla Glue OG",
-        "price": 77.99,
-        "img": "/images/budz.PNG",
-        "type": "bud, flower"
+        "id": "1",
+        "name": "A5 Wagyu Kobe Steak",
+        "price": 900.00,
+        "img": "/images/wagyu.jpg",
+        "type": "food"
     },
     {
-        "id": "1",
-        "name": "Wedding Cake",
-        "price": 69.99,
-        "img": "/images/budz.PNG",
-        "type": "bud, flower"
+        "id": "0",
+        "name": "Beluga Caviar",
+        "price": 7000.00,
+        "img": "/images/caviar.jpg",
+        "type": "food"
     },
     {
         "id": "2",
-        "name": "Sticky Fingers OG",
-        "price": 49.99,
-        "img": "/images/budz.PNG",
-        "type": "bud, flower"
+        "name": "Tiger Fugu",
+        "price": 25000.00,
+        "img": "/images/fugu.jpg",
+        "type": "food"
     }
 ]
 

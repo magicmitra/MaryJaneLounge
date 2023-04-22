@@ -20,10 +20,11 @@ const MenuItem = (props: ProductModel) => {
             />
             <div style={{
                 position: 'absolute',
-                right: '15px',
+                left: '215px',
                 top: '12px'
             }}>
                 {props.name}
+                
                 <Quantity 
                     id={props.id}
                     name={props.name}
@@ -31,7 +32,7 @@ const MenuItem = (props: ProductModel) => {
                     img={props.img}
                     type={props.type}
                 />
-                {`$ ${props.price}`}
+                {`$ ${(props.price).toFixed(2)}`}
             </div>
         </div>
     )
