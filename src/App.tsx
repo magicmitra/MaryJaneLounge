@@ -91,7 +91,7 @@ function App() {
 }
 
 const buttonFooterNavStyle = {
-    backgroundColor: "#683973",
+    background: "#4E764E",
     color: "#B899BF",
     textFont: 'IBM Plex Mono',
     marginRight: '3px'
@@ -103,7 +103,7 @@ const modalStyle = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 170,
-    bgcolor: '#6F5C73',
+    bgcolor: '#74A059',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,

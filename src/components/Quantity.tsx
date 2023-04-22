@@ -49,7 +49,7 @@ const Quantity = (props: ProductModel) => {
 }
 
 const buttonPlusMinusStyle = {
-    backgroundColor: "#683973",
+    background: "#4E764E",
     color: "#B899BF",
     textFont: 'IBM Plex Mono',
     borderRadius: 50,
