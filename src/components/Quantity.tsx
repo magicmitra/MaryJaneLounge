@@ -36,10 +36,12 @@ const Quantity = (props: ProductModel) => {
                     onClick={handleSubtractClick}>
                 -
             </Button>
+            
                 {(items.findIndex(item => item.id === props.id) === -1) ?
                     0
                     : items[items.findIndex(item => item.id === props.id)].quantity
                 }
+            
             <Button style={buttonPlusMinusStyle}
                     onClick={handleAddClick}>
                 +
@@ -50,11 +52,12 @@ const Quantity = (props: ProductModel) => {
 
 const buttonPlusMinusStyle = {
     background: "#4E764E",
-    color: "#B899BF",
+    color: "#A5BE7D",
     textFont: 'IBM Plex Mono',
-    borderRadius: 50,
-    height: '20px',
-    width: '10px'
+    textSize: 'large',
+    borderRadius: '100%',
+    padding: '1px',
+    size: 'small'
 }
 
 export default Quantity
