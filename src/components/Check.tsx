@@ -53,7 +53,7 @@ const Check = () => {
 
 const buttonStyle = {
     background: "#2B393B",
-    color: "#B899BF",
+    color: "#A5BE7D",
     textFont: 'IBM Plex Mono',
     marginRight: '30px',
     marginLeft: '50px'

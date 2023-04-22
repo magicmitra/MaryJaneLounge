@@ -92,7 +92,7 @@ function App() {
 
 const buttonFooterNavStyle = {
     background: "#4E764E",
-    color: "#B899BF",
+    color: "#A5BE7D",
     textFont: 'IBM Plex Mono',
     marginRight: '3px'
 }
