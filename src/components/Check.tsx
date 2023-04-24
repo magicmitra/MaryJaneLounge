@@ -9,7 +9,7 @@ const Check = () => {
 
     const handleCloseCheckAndPay = () => {
         // TODO
-        alert('GIMME YOUR MONEY!')
+        alert('LETS HOOK UP YOUR POS/PAYMENT PROCESSOR!')
     }
 
     const checkItems = flattenCheck(items)
