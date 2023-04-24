@@ -51,7 +51,7 @@ const MenuItem = (props: ProductModel) => {
             <div style={{
                 position: 'absolute',
                 left: '215px',
-                bottom: '10px'
+                bottom: '9px'
             }}>
                 {(items.findIndex(item => item.id === props.id) === -1) ?
                     <Button style={buttonOrderStyle}
@@ -76,7 +76,9 @@ const buttonOrderStyle = {
     background: "#4E764E",
     color: "#A5BE7D",
     textFont: 'IBM Plex Mono',
-    fontSize: '15px'
+    fontSize: '15px',
+    paddingBottom: '1px',
+    paddingTop: '1px'
 }
 
 export default MenuItem

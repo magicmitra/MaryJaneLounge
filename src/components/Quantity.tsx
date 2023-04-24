@@ -57,7 +57,7 @@ const buttonPlusMinusStyleMinus = {
     borderRadius: '5%',
     maxHeight: '18px',
     maxWidth: '9x',
-    fontSize: '30px',
+    fontSize: '27px',
     marginRight: '4px'
 }
 
@@ -68,7 +68,7 @@ const buttonPlusMinusStylePlus = {
     borderRadius: '5%',
     maxHeight: '18px',
     maxWidth: '9x',
-    fontSize: '30px',
+    fontSize: '27px',
     marginLeft: '4px'
 }
 
