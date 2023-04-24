@@ -32,7 +32,7 @@ const Quantity = (props: ProductModel) => {
 
     return (
         <div>
-            <Button style={buttonPlusMinusStyle}
+            <Button style={buttonPlusMinusStyleMinus}
                     onClick={handleSubtractClick}>
                 -
             </Button>
@@ -42,7 +42,7 @@ const Quantity = (props: ProductModel) => {
                     : items[items.findIndex(item => item.id === props.id)].quantity
                 }
             
-            <Button style={buttonPlusMinusStyle}
+            <Button style={buttonPlusMinusStylePlus}
                     onClick={handleAddClick}>
                 +
             </Button>
@@ -50,14 +50,26 @@ const Quantity = (props: ProductModel) => {
     )
 }
 
-const buttonPlusMinusStyle = {
+const buttonPlusMinusStyleMinus = {
     background: "#4E764E",
     color: "#A5BE7D",
     textFont: 'IBM Plex Mono',
-    textSize: 'large',
-    borderRadius: '100%',
-    padding: '1px',
-    size: 'small'
+    borderRadius: '5%',
+    maxHeight: '18px',
+    maxWidth: '9x',
+    fontSize: '30px',
+    marginRight: '4px'
+}
+
+const buttonPlusMinusStylePlus = {
+    background: "#4E764E",
+    color: "#A5BE7D",
+    textFont: 'IBM Plex Mono',
+    borderRadius: '5%',
+    maxHeight: '18px',
+    maxWidth: '9x',
+    fontSize: '30px',
+    marginLeft: '4px'
 }
 
 export default Quantity
