@@ -29,8 +29,9 @@ TODO POC
 - [x] Place holder for tax
 - [x] Isolate function that flattens Cart Items
 - [x] Hacktomize for mobile. 
-- [ ] Optimize footer to be visible at all times. 
-
+- [x] Optimize footer to be visible at all times. 
+- [ ] Better modals or Use routes for different pages
+ 
 TODO down the line
 - [ ] Figure out how user session works in QR code ordering. 
 - [ ] Separate products by strains
