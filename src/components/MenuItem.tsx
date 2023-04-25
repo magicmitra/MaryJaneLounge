@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../store/store'
-import { Button } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import { addToCart } from '../store/cartSlice'
 import ProductModel from '../models/product'
 import Quantity from './Quantity'
@@ -19,7 +19,8 @@ const MenuItem = (props: ProductModel) => {
     }
 
     return (
-        <div style={{
+        <div className='MenuItem' 
+             style={{
             position: 'relative'
         }}> 
             <img src={props.img}
@@ -34,24 +35,31 @@ const MenuItem = (props: ProductModel) => {
                  }}
             />
             
-            <div style={{
+            <div className='ItemName' 
+                 style={{
                 position: 'absolute',
                 left: '215px',
                 top: '12px'
             }}>
-                    {props.name}
+                <Typography>
+                    {props.name} 
+                </Typography>        
             </div>
-            <div style={{
+            <div className='ItemPrice'
+                 style={{
                 position: 'absolute',
                 left: '215px',
                 top: '40px'
             }}>
-                {`$ ${(props.price).toFixed(2)}`}
+                <Typography>
+                    {`$ ${(props.price).toFixed(2)}`}
+                </Typography>
             </div>
-            <div style={{
+            <div className='Quantity-button'
+                 style={{
                 position: 'absolute',
                 left: '215px',
-                bottom: '9px'
+                bottom: '10px'
             }}>
                 {(items.findIndex(item => item.id === props.id) === -1) ?
                     <Button style={buttonOrderStyle}
@@ -75,7 +83,6 @@ const MenuItem = (props: ProductModel) => {
 const buttonOrderStyle = {
     background: "#4E764E",
     color: "#A5BE7D",
-    textFont: 'IBM Plex Mono',
     fontSize: '15px',
     paddingBottom: '1px',
     paddingTop: '1px'

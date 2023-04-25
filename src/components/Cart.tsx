@@ -1,4 +1,4 @@
-import { Button } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import { RootState } from '../store/store'
 import { useSelector, useDispatch } from 'react-redux'
 import { addToCheck } from '../store/checkSlice'
@@ -44,7 +44,7 @@ const Cart = () => {
                             <img src={item.img}   
                                  style={imageStyle} 
                             />
-                            {item.name }
+                            <Typography>{item.name}</Typography>
                             <Quantity 
                                 id={item.id}
                                 name={item.name}
@@ -52,13 +52,15 @@ const Cart = () => {
                                 img={item.img}
                                 type={item.type}
                 />
-                            {` $ ${item.price}`}
+                            <Typography>{` $ ${item.price}`}</Typography>
                         </div>
                     )
                 })
             }
-            <div className="Total">
-                { `Total $ ${(items.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0)).toFixed(2)}` }
+            <div className="Total-cart">
+                <Typography>
+                    { `Total $ ${(items.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0)).toFixed(2)}` }
+                </Typography>
             </div>
             <Button style={buttonStyle}
                     onClick={handleCartOrderClick}>
@@ -77,7 +79,6 @@ const imageStyle = {
 const buttonStyle = {
     background: "#2B393B",
     color: "#A5BE7D",
-    textFont: 'IBM Plex Mono',
     marginRight: '30px',
     marginLeft: '50px'
 }

@@ -1,4 +1,5 @@
 import { Button, Modal, Box } from '@mui/material'
+import { ThemeProvider } from '@mui/material'
 import { useState } from 'react'
 import { RootState } from './store/store'
 import { useSelector } from 'react-redux'
@@ -7,6 +8,7 @@ import Cart from './components/Cart'
 import Check from './components/Check'
 import products from './data/product'
 import flattenCheck from './utils/flattenCheck'
+import theme from './utils/fontTheme'
 
 function App() {    
     const cartItems = flattenCheck(useSelector((state: RootState) => state.cart.items))
@@ -19,6 +21,7 @@ function App() {
     const handleCloseCheckModal = () => setOpenCheckModal(false)
 
     return (
+        <ThemeProvider theme={theme}>
         <div className="App">
             <header className="App-header">
             </header>
@@ -87,13 +90,13 @@ function App() {
                 </Modal>
             </footer>
         </div>
+        </ThemeProvider>
   );
 }
 
 const buttonFooterNavStyle = {
     background: "#4E764E",
     color: "#A5BE7D",
-    textFont: 'IBM Plex Mono',
     marginRight: '3px'
 }
 
@@ -106,7 +109,7 @@ const modalStyle = {
     bgcolor: '#74A059',
     border: '2px solid #000',
     boxShadow: 24,
-    p: 4,
+    p: 4
   };
 
 export default App;
