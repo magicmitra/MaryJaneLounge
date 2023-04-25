@@ -1,4 +1,4 @@
-import { Button } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import { RootState } from '../store/store'
 import { useSelector } from 'react-redux'
 import flattenCheck from '../utils/flattenCheck'
@@ -24,24 +24,33 @@ const Check = () => {
                 checkItems.map(item => {
                     return (
                         <div>
-                            { item.name }
-                            {` $${(item.price)}`}    
+                            <Typography>
+                                { item.name }
+                                {` $${(item.price)}`} 
+                            </Typography>   
                         </div>
                     )
-                    
                 })
             }
             <div className='Subtotal'>
-                Subtotal $ {subtotal.toFixed(2)}
+                <Typography>
+                    Subtotal $ {subtotal.toFixed(2)}
+                </Typography>
             </div>
             <div className="Tip">
-                Tip - COMING SOON
+                <Typography>
+                    Tip - COMING SOON
+                </Typography>
             </div>
             <div className='Tax'>
-                Tax - COMING SOON
+                <Typography>
+                    Tax - COMING SOON
+                </Typography>
             </div>
-            <div className='Total'>
-                Total $ {(subtotal + tax + tip).toFixed(2)}
+            <div className='Total-check'>
+                <Typography>
+                    Total $ {(subtotal + tax + tip).toFixed(2)}
+                </Typography>
             </div>
             <Button style={buttonStyle}
                     onClick={handleCloseCheckAndPay}>
@@ -54,7 +63,6 @@ const Check = () => {
 const buttonStyle = {
     background: "#2B393B",
     color: "#A5BE7D",
-    textFont: 'IBM Plex Mono',
     marginRight: '30px',
     marginLeft: '50px'
 }

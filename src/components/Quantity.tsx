@@ -1,4 +1,4 @@
-import { Button } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, removeFromCart } from '../store/cartSlice'
 import { RootState } from '../store/store'
@@ -36,12 +36,12 @@ const Quantity = (props: ProductModel) => {
                     onClick={handleSubtractClick}>
                 -
             </Button>
-            
-                {(items.findIndex(item => item.id === props.id) === -1) ?
-                    0
-                    : items[items.findIndex(item => item.id === props.id)].quantity
-                }
-            
+                {/* <Typography> */}
+                    {(items.findIndex(item => item.id === props.id) === -1) ?
+                        0
+                        : items[items.findIndex(item => item.id === props.id)].quantity
+                    }
+                {/* </Typography> */}
             <Button style={buttonPlusMinusStylePlus}
                     onClick={handleAddClick}>
                 +
@@ -54,10 +54,13 @@ const buttonPlusMinusStyleMinus = {
     background: "#4E764E",
     color: "#A5BE7D",
     textFont: 'IBM Plex Mono',
-    borderRadius: '5%',
-    maxHeight: '18px',
-    maxWidth: '9x',
+    borderRadius: '100%',
     fontSize: '27px',
+    padding: '6px 6px',
+    margin: '0px',
+    minWidth: '9px',
+    height: '18px',
+    width: '18px',
     marginRight: '4px'
 }
 
@@ -65,10 +68,13 @@ const buttonPlusMinusStylePlus = {
     background: "#4E764E",
     color: "#A5BE7D",
     textFont: 'IBM Plex Mono',
-    borderRadius: '5%',
-    maxHeight: '18px',
-    maxWidth: '9x',
-    fontSize: '27px',
+    borderRadius: '100%',
+    fontSize: '25px',
+    padding: '6px 6px',
+    margin: '0px',
+    minWidth: '9px',
+    height: '18px',
+    width: '18px',
     marginLeft: '4px'
 }
 
